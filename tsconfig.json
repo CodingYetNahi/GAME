@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "lib": ["DOM", "ES2020"],
+    "types": ["node"]
+  },
+  "include": ["src/main.ts", "webpack.config.js"],
+  "exclude": ["src/index.ts"]
+}
