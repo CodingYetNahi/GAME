@@ -105,6 +105,13 @@ class GameScene extends Phaser.Scene {
     }
 
     create() {
+        this.obstacles = [];
+        this.score = 0;
+        this.level = 1;
+        this.gameSpeed = 5;
+        this.isGameOver = false;
+        this.isLevelComplete = false;
+
         this.graphics = this.add.graphics();
 
         this.player = {
@@ -221,7 +228,10 @@ class GameScene extends Phaser.Scene {
     }
 
     private restartGame() {
-        this.scene.restart({ sessionId: this.sessionId, isUnlocked: this.isUnlocked });
+        this.removePaywall();
+        this.scene.restart({ 
+            sessionId: this.sessionId, 
+            isUnlocked: this.isUnlocked });
     }
 
     private endGame(won: boolean) {
