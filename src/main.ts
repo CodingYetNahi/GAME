@@ -402,7 +402,13 @@ const config: Phaser.Types.Core.GameConfig = {
     height: 600,
     parent: 'game-container',
     scene: [GameScene],
-    backgroundColor: '#0a0a12'
+    backgroundColor: '#0a0a12',
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 800,
+        height: 600
+    }
 };
 
 new Phaser.Game(config);
